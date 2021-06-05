@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/simple' => 'erb#bootstrap'
+  get '/simple' => 'simple#index'
 end

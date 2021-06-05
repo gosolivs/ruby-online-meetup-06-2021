@@ -1,7 +1,7 @@
-class ErbController < ApplicationController
-  layout 'bootstrap'
+class SimpleController < ApplicationController
+  layout 'simple'
 
-  def bootstrap
+  def index
     categories
   end
 
