@@ -1,0 +1,50 @@
+<nav class="navbar bg-dark">
+  <div class="container-fluid">
+    <div class="navbar-brand text-white">Мой блог</div>
+  </div>
+</nav>
+
+<div class="pt-4">
+  <div class="container">
+    <% @categories.each do |category| %>
+      <h2 class="mb-1"><%= category.title %></h2>
+
+      <% unless category.description.blank? %>
+        <p class="mb-0"><%= category.description %></p>
+      <% end %>
+
+      <div class="row mt-4">
+        <% category.posts.each do |post| %>
+          <article class="col-lg-3 col-md-6 col-12">
+            <div class="card mb-4 card-hover">
+              <div class="card-img-top">
+                <img src="<%= post.image_path %>" alt="<%= post.title %>" class="card-img-top rounded-top">
+              </div>
+
+              <div class="card-body">
+                <h3 class="h4 text-truncate-line-2 mb-0"><%= post.title %></h3>
+
+                <% unless post.content.blank? %>
+                  <div class="card-text mt-2"><%= post.content %></div>
+                <% end %>
+              </div>
+
+              <div class="card-footer"><%= post.author %></div>
+            </div>
+          </article>
+        <% end %>
+
+        <% if category.posts.empty? %>
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                Статей нет
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+    <% end %>
+  </div>
+</div>
