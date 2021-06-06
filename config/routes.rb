@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/simple' => 'simple#index'
+  get '/step_1' => 'simple#step_1'
 end

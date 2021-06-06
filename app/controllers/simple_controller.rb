@@ -1,7 +1,7 @@
 class SimpleController < ApplicationController
   layout 'simple'
 
-  def index
+  def step_1
     categories
   end
 
