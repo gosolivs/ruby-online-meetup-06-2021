@@ -12,7 +12,7 @@
         :key="category.title"
         :title="category.title"
         :description="category.description"
-        :posts="JSON.stringify(category.posts)"
+        :posts="category.posts"
       />
     </b-container>
   </div>

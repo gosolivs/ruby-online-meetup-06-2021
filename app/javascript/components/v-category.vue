@@ -41,12 +41,16 @@ export default {
       type: String,
     },
     posts: {
-      type: String,
+      type: [String, Array],
+      required: true,
     },
   },
 
   computed: {
-    postList: ({ posts }) => JSON.parse(posts) ?? [],
+    postList: ({ posts }) =>
+      Array.isArray(posts) ?
+        posts :
+        JSON.parse(posts),
   },
 };
 </script>
