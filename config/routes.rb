@@ -1,9 +1,3 @@
-class OnlyHtmlConstraint
-  def matches?(request)
-    !request.xhr? and request.format == 'html'
-  end
-end
-
 Rails.application.routes.draw do
   get '/', to: redirect(path: '/step_1')
   get '/step_1' => 'simple#step_1'
@@ -14,7 +8,7 @@ Rails.application.routes.draw do
   get '/vue/step_1' => 'vue#step_1'
   get '/vue/step_2' => 'vue#step_2'
 
-  get '/categories' => 'simple#step_1', format: true, constraints: { format: 'json' }
+  get '/categories' => 'simple#step_1', format: true, constraints: { format: :json }
 
-  get '*page(.:format)' => 'frontend#index', :constraints => OnlyHtmlConstraint.new
+  get '*page(.:format)' => 'frontend#index', :constraints => FrontendHelper::OnlyHtmlConstraint.new
 end
