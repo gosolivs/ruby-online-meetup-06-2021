@@ -1,0 +1,21 @@
+%b-navbar.mb-4{:type => "dark", :variant => "dark"}
+  %b-container{:fluid => true}
+    %b-navbar-brand Мой блог
+
+%b-container
+  - @categories.each do |category|
+    %h2.mb-1= category.title
+    - unless category.description.blank?
+      .mb-0= category.description
+
+    %b-row.mt-4
+      - category.posts.each do |post|
+        %b-col{:lg => 3, :md => 6}
+          %b-card{"img-src" => post.image_path, "img-alt" => post.title, "img-top" => true, :title => post.title, :footer => post.author}
+            - unless post.content.blank?
+              %b-card-text.mt-2= post.content
+
+      - if category.posts.empty?
+        %b-col
+          %b-card
+            %b-card-text Статей нет

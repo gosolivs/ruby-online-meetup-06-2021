@@ -8,6 +8,7 @@
       %h2.mb-1= category.title
       - unless category.description.blank?
         %p.mb-0= category.description
+
       .row.mt-4
         - category.posts.each do |post|
           %article.col-lg-3.col-md-6.col-12
@@ -19,6 +20,7 @@
                 - unless post.content.blank?
                   .card-text.mt-2= post.content
               .card-footer= post.author
+
         - if category.posts.empty?
           .col-12
             .card
