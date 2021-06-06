@@ -29,6 +29,6 @@ class Post < ApplicationRecord
   end
 
   def attributes
-    { 'title' => '', 'content' => nil, 'author' => '', 'image_path' => '' }
+    { 'id' => 0, 'title' => '', 'content' => nil, 'author' => '', 'image_path' => '' }
   end
 end

@@ -14,6 +14,6 @@ class Category < ApplicationRecord
   has_many :posts, dependent: :destroy
 
   def attributes
-    { 'id' => '', 'title' => '', 'description' => nil, 'posts' => [] }
+    { 'id' => 0, 'title' => '', 'description' => nil, 'posts' => [] }
   end
 end
