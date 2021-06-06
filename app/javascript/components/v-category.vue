@@ -23,12 +23,18 @@
 </template>
 
 <script>
+import { BRow, BCol, BCard, BCardText } from "bootstrap-vue";
+
 import VPost from './v-post';
 
 export default {
   name: "v-category",
 
   components: {
+    BRow,
+    BCol,
+    BCard,
+    BCardText,
     VPost,
   },
 

@@ -2,7 +2,10 @@ class SimpleController < ApplicationController
   layout 'simple'
 
   def step_1
-    categories
+    respond_to do |format|
+      format.html { categories }
+      format.json { render json: categories }
+    end
   end
 
   def step_2
