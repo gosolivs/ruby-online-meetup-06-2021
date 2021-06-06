@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import { BNavbar, BNavbarBrand, BContainer } from 'bootstrap-vue'
+import { BNavbar, BNavbarBrand, BContainer } from "bootstrap-vue"
 
-import VCategory from '../components/v-category';
-import VPost from '../components/v-post';
+import VCategory from "../components/v-category";
+import VPost from "../components/v-post";
 
 export default {
   name: "page-category",

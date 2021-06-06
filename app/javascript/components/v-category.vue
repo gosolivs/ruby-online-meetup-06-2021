@@ -25,7 +25,7 @@
 <script>
 import { BRow, BCol, BCard, BCardText } from "bootstrap-vue";
 
-import VPost from './v-post';
+import VPost from "./v-post";
 
 export default {
   name: "v-category",
