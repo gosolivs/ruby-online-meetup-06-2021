@@ -9,5 +9,11 @@
 #  updated_at  :datetime         not null
 #
 class Category < ApplicationRecord
+  include ActiveModel::Serializers::JSON
+
   has_many :posts, dependent: :destroy
+
+  def attributes
+    { 'id' => '', 'title' => '', 'description' => nil, 'posts' => [] }
+  end
 end

@@ -5,6 +5,10 @@ class VueController < ApplicationController
     categories
   end
 
+  def step_2
+    categories
+  end
+
   private
 
   def categories

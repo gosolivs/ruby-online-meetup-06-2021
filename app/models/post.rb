@@ -20,9 +20,15 @@
 #  category_id  (category_id => categories.id)
 #
 class Post < ApplicationRecord
+  include ActiveModel::Serializers::JSON
+
   belongs_to :category
 
   def image_path
     "/static/#{image}.png"
+  end
+
+  def attributes
+    { 'title' => '', 'content' => nil, 'author' => '', 'image_path' => '' }
   end
 end

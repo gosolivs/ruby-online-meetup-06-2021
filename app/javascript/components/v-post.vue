@@ -1,6 +1,6 @@
 <template>
   <b-card
-    :img-src="imagePath"
+    :img-src="image"
     :img-alt="title"
     img-top
     :title="title"
@@ -32,10 +32,6 @@ export default {
       type: String,
       required: true,
     },
-  },
-
-  computed: {
-    imagePath: ({ image }) => `/static/${image}.png`
   },
 };
 </script>

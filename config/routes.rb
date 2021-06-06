@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/vue_simple/step_1' => 'vue_simple#step_1'
 
   get '/vue/step_1' => 'vue#step_1'
+  get '/vue/step_2' => 'vue#step_2'
 end
