@@ -1,0 +1,7 @@
+%b-navbar.mb-4{:type => "dark", :variant => "dark"}
+  %b-container{:fluid => true}
+    %b-navbar-brand Мой блог
+
+%b-container
+  - @categories.each do |category|
+    %v-category{:title => category.title, :description => category.description, :posts => category.posts.to_json}
