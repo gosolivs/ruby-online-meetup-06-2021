@@ -1,10 +1,6 @@
 <template>
   <div>
-    <b-navbar class="mb-4" type="dark" variant="dark">
-      <b-container fluid>
-        <b-navbar-brand>Мой блог</b-navbar-brand>
-      </b-container>
-    </b-navbar>
+    <v-header>Мой блог</v-header>
 
     <b-container>
       <b-card v-if="hasProgress">Загрузка...</b-card>
@@ -22,8 +18,9 @@
 </template>
 
 <script>
-import { BNavbar, BNavbarBrand, BContainer, BCard } from "bootstrap-vue"
+import { BContainer, BCard } from "bootstrap-vue"
 
+import VHeader from "../../../components/v-header";
 import VCategory from "../../../components/v-category";
 import VPost from "../../../components/v-post";
 import { getCategories } from "../../api/api";
@@ -33,9 +30,8 @@ export default {
 
   components: {
     BContainer,
-    BNavbar,
-    BNavbarBrand,
     BCard,
+    VHeader,
     VCategory,
     VPost,
   },
