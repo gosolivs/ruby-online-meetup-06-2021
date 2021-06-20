@@ -1,0 +1,15 @@
+!!!
+%html{lang: "ru"}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
+    %title RubyMeetup
+
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = javascript_pack_tag 'frontend'
+    = stylesheet_pack_tag 'frontend'
+
+  %body.bg-light
+    #app Загрузка...

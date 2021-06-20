@@ -1,0 +1,22 @@
+!!!
+%html{lang: "ru"}
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
+    %title RubyMeetup
+
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    %link{href: "https://unpkg.com/bootstrap@4/dist/css/bootstrap.min.css", rel: "stylesheet"}
+    %link{href: "https://unpkg.com/bootstrap-vue/dist/bootstrap-vue.min.css", rel: "stylesheet"}
+
+    %script{src: "https://unpkg.com/vue/dist/vue.min.js"}
+    %script{src: "https://unpkg.com/bootstrap-vue/dist/bootstrap-vue.min.js"}
+
+  %body.bg-light
+    #app
+      = yield
+
+    :javascript
+      new Vue({ el: '#app' });
