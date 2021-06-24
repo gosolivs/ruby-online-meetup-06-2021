@@ -13,7 +13,7 @@
 #
 # Indexes
 #
-#  index_posts_on_categories_id  (category_id)
+#  index_posts_on_category_id  (category_id)
 #
 # Foreign Keys
 #

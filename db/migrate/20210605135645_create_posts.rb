@@ -6,7 +6,7 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.string :author, null: false
       t.string :image, null: false
 
-      t.belongs_to :categories, foreign_key: true
+      t.belongs_to :category, foreign_key: true
 
       t.timestamps
     end

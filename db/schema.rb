@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 2021_06_05_135645) do
     t.text "content"
     t.string "author", null: false
     t.string "image", null: false
-    t.integer "categories_id"
+    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["categories_id"], name: "index_posts_on_categories_id"
+    t.index ["category_id"], name: "index_posts_on_category_id"
   end
 
-  add_foreign_key "posts", "categories", column: "categories_id"
+  add_foreign_key "posts", "categories"
 end
